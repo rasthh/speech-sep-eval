@@ -1,7 +1,9 @@
 # speech-sep-eval
 Speech separation evaluation (speech-sep-eval) enables the evaluation of any method for speech separation. 
 
-After having run an setup script, the idea is to be provide (a) a list of models, (b) a series of metrics, (c) pre-processing, and (d) a series of datasets. The repo will then report and visualize the results.
+The speech-sep-eval evaluates a speech separation models ability to do process a mixture and output a single target speech signal. The considered interference can be other speakers (speaker separation), classic examples of (stationary) noise (speech enhancement), and, for now, interference from music.
+
+After having run an setup script, the idea is to be provide (a) a list of models, (b) a series of metrics, (c) pre-processing, and (d) a series of datasets. The repo will then report and visualize the results. 
 
 ## TODO
 - [ ] Evaluation interface (supply models, choose metrics/preprocessing/datasets)
@@ -20,12 +22,14 @@ After having run an setup script, the idea is to be provide (a) a list of models
 - [ ] Preprocess: Identity-mapping
 - [ ] Preprocess: Random RIR preprocess
 - [ ] Setup: Download and setup script for LibriSpeech and one other dataset with (splits)
-- [ ] Setup: Specify requirements
+- [ ] Setup: Download and setup script for classic noise datasets (publicly available, but like ICRA)
+- [ ] Setup: Specify pip requirements
 - [ ] Reporting: Export of results in table
 - [ ] Reporting: Visualize examples of waveforms, spectrograms, MFCCs
-- [ ] Reporting: Jupyter with best and worst audio files
+- [ ] Reporting: Auralize examples of best/worst performance
 
 ## Various ideas/considerations
+- Download and setup script for music datasets (publicly available), television, something like AudioSet, or even examples of various acoustics scenes from a scene classification task. 
 - How much of this can we get from existing repos? How much should we simply wrap those, if they are available?
 - Should this be dockerized?
 - Should simple baselines be a part of this repo? Like Conv-TasNet or spectral subtraction?

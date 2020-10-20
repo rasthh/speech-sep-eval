@@ -33,8 +33,8 @@ After having run an setup script, the idea is to be provide (a) a list of models
 - [ ] Reporting: Auralize examples of best/worst performance
 
 ## Various ideas/considerations
+- How much of this can we get from existing repos? How much should we simply wrap those, if they are available? https://github.com/espnet/espnet and http://kaldi-asr.org/doc/about.html.
 - Download and setup script for music datasets (publicly available), television, something like AudioSet, or even examples of various acoustics scenes from a scene classification task. 
-- How much of this can we get from existing repos? How much should we simply wrap those, if they are available?
 - Should this be dockerized?
 - Should simple baselines be a part of this repo? Like Conv-TasNet or spectral subtraction?
 - Impose characteristics for different hardware through filtering (somewhat like RIR)

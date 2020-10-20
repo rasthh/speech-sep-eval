@@ -33,14 +33,16 @@ After having run an setup script, the idea is to be provide (a) a list of models
 - [ ] Reporting: Auralize examples of best/worst performance
 
 ## Various ideas/considerations
+- Metric: ASR improvement based on ESPNet/Kaldi
 - How much of this can we get from existing repos? How much should we simply wrap those, if they are available? https://github.com/espnet/espnet and http://kaldi-asr.org/doc/about.html.
 - Download and setup script for music datasets (publicly available), television, something like AudioSet, or even examples of various acoustics scenes from a scene classification task. 
 - Should this be dockerized?
 - Should simple baselines be a part of this repo? Like Conv-TasNet or spectral subtraction?
 - Impose characteristics for different hardware through filtering (somewhat like RIR)
-- Use more advanced metrics than PESQ/STOI, e.g. DESQ, or Helia's measure.
+- Use more advanced metrics than PESQ/STOI, e.g. [DESQ](https://ieeexplore.ieee.org/document/8682754), or [Helia's measure](https://asa.scitation.org/doi/abs/10.1121/1.5129114).
 - Impose a heaing impaired characteristics through a model; is it meaningful to add a simplistic "hearing impairment" simulation by filtering based on audiogram? - (chat with Abbie/Torsten/Raul)
 - Stratification of performance/fairness through datasets with labelled demographics such as vox-celeb - chat with Pola
 - Simple interpretability considerations on DL systems in this? - chat with Laura/Lars
 - Interactive demo notebook that records an audio snippet and runs with that in pipeline
-- Metric: MFCC MSE?
+- Metric: MFCC MSE, or other known acoustic features and their change; e.g. F0
+- Interface for simple MOS-evaluation and SRT-evaluation, for illustration.

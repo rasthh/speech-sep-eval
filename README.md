@@ -1,7 +1,9 @@
 # speech-sep-eval
 Speech separation evaluation (speech-sep-eval) enables the evaluation of any method for speech separation. 
 
-The speech-sep-eval evaluates a speech separation models ability to do process a mixture and output a single target speech signal. The considered interference can be other speakers (speaker separation), classic examples of (stationary) noise (speech enhancement), and, for now, interference from music.
+The speech-sep-eval evaluates a speech separation models ability to process a mixture signal, consisting of a target speech signal and interferring signals, and output a single target speech signal. The considered interference can be e.g. other speakers (speaker separation) or classic examples of stationary noise (speech enhancement).
+
+The comprehensive evaluation seeks to address issues with limited evaluation by enabling an easy-to-use pipeline that enables a multi-dimensional evaluation on e.g. unseen data in reverberent environments.
 
 After having run an setup script, the idea is to be provide (a) a list of models, (b) a series of metrics, (c) pre-processing, and (d) a series of datasets. The repo will then report and visualize the results. 
 
@@ -20,7 +22,9 @@ After having run an setup script, the idea is to be provide (a) a list of models
 - [ ] Metric: PESQ
 - [ ] Metric: STOI
 - [ ] Preprocess: Identity-mapping
-- [ ] Preprocess: Random RIR preprocess
+- [ ] Preprocess: Additive mixture
+- [ ] Preprocess: Random RIR mixture
+- [ ] Preprocess: Noise addition parametrized by desired SNR(-ranges)
 - [ ] Setup: Download and setup script for LibriSpeech and one other dataset with (splits)
 - [ ] Setup: Download and setup script for classic noise datasets (publicly available, but like ICRA)
 - [ ] Setup: Specify pip requirements

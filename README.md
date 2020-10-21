@@ -1,36 +1,46 @@
 # speech-sep-eval
 Speech separation evaluation (speech-sep-eval) enables the evaluation of any method for speech separation. 
 
-The speech-sep-eval evaluates a speech separation models ability to process a mixture signal, consisting of a target speech signal and interferring signals, and output a single target speech signal. The considered interference can be e.g. other speakers (speaker separation) or classic examples of stationary noise (speech enhancement).
+The speech-sep-eval evaluates a speech separation models ability to process a mixture signal, consisting of a target speech signal and interferring signals, and output a single target speech signal. The considered interference can be e.g. other speakers (speaker separation) or classic examples of stationary noise (speech enhancement). The comprehensive evaluation seeks to address issues with limited evaluation by enabling an easy-to-use pipeline that enables a multi-dimensional evaluation on e.g. unseen data in reverberent environments.
 
-The comprehensive evaluation seeks to address issues with limited evaluation by enabling an easy-to-use pipeline that enables a multi-dimensional evaluation on e.g. unseen data in reverberent environments.
+After having run an setup script, you setup a pipeline: (a) choose datasets to evaluate on, (b) choose which pre-processings to compare, (c) you provide the models, (d) choose which metrics to calculate, and (e) choose how to report the results. 
 
-After having run an setup script, the idea is to be provide (a) a list of models, (b) a series of metrics, (c) pre-processing, and (d) a series of datasets. The repo will then report and visualize the results. 
+![](./resources/speech-sep-eval.png)
+
+## Setup
+
+[Describe setup]
 
 ## TODO
-- [ ] Evaluation interface (supply models, choose metrics/preprocessing/datasets)
-- [ ] Class to wrap metrics
-- [ ] Class to wrap preprocessing
-- [ ] Class to wrap dataset
-- [ ] Class to wrap "input model to be evaluated"
-- [ ] Class to wrap evaluation report
-- [ ] Setup simple testing of code as a starting point.
+- [ ] Pipeline: Pipeline ABC
+- [ ] Metric: Metric ABC
+- [ ] Preprocessing: Preprocessing ABC
+- [ ] Dataset: Dataset ABC
+- [ ] Model: Model ABC
+- [ ] Report: Report ABC
 - [ ] Metric: SI-SNR
 - [ ] Metric: SDR
 - [ ] Metric: Waveform MSE
 - [ ] Metric: Spectrogram MSE
 - [ ] Metric: PESQ
 - [ ] Metric: STOI
+- [ ] Model: Supplied
+- [ ] Model: Passthrough
+- [ ] Model: SpectralSubtract
+- [ ] Model: Tandem
 - [ ] Preprocess: Identity-mapping
 - [ ] Preprocess: Additive mixture
 - [ ] Preprocess: Random RIR mixture
 - [ ] Preprocess: Noise addition parametrized by desired SNR(-ranges)
-- [ ] Setup: Download and setup script for LibriSpeech and one other dataset with (splits)
-- [ ] Setup: Download and setup script for classic noise datasets (publicly available, but like ICRA)
+- [ ] Setup: Download and setup script for LibriSpeech and VoxCeleb
+- [ ] Setup: Download and setup script for a noise datasets
 - [ ] Setup: Specify pip requirements
+- [ ] Setup: Write setup description
 - [ ] Reporting: Export of results in table
 - [ ] Reporting: Visualize examples of waveforms, spectrograms, MFCCs
 - [ ] Reporting: Auralize examples of best/worst performance
+- [ ] Setup simple testing of code as a starting point.
+- [ ] Examples: sample pipeline
 
 ## Various ideas/considerations
 - Metric: ASR improvement based on ESPNet/Kaldi

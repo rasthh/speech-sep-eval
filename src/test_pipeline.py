@@ -11,6 +11,6 @@ def test_basepipeline():
         'reports': None,
     }
     pipeline = BasePipeline(**modules)
-    
-    with pytest.raises(NotImplemented):
+
+    with pytest.raises(NotImplementedError):
         pipeline.run()

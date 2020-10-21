@@ -84,69 +84,57 @@ class BasePipeline(Pipeline):
     @property
     def datasets(self):
         """ ... """
-        #raise NotImplementedError
         pass
   
     @datasets.setter
     def datasets(self,value):
-        #raise NotImplementedError
         pass
 
     @property
     def preprocessings(self):
         """ ... """
-        #raise NotImplementedError
         pass
   
     @preprocessings.setter
     def preprocessings(self, value):
-        #raise NotImplementedError
         pass
 
     @property
     def models(self):
         """ ... """
-        #raise NotImplementedError
         pass
   
     @models.setter
     def models(self, value):
-        #raise NotImplementedError
         pass
 
     @property
     def postprocessings(self):
         """ ... """
         pass
-        #raise NotImplementedError
   
     @postprocessings.setter
     def postprocessings(self, value):
         pass
-        #raise NotImplementedError
 
 
     @property
     def metrics(self):
         """ ... """
         pass
-        #raise NotImplementedError
   
     @metrics.setter
     def metrics(self, value):
         pass
-        #raise NotImplementedError
 
     @property
     def reports(self):
         """ ... """
         pass
-        #raise NotImplementedError
   
     @reports.setter
     def reports(self, value):
         pass
-        #raise NotImplementedError
 
     def run(self):
-        raise NotImplemented
+        raise NotImplementedError
